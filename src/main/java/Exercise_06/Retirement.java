@@ -4,7 +4,8 @@ copyright 2021 Matthew McKee
 */
 
 package Exercise_06;
-
+//imports the time in java to get the year
+import java.time.Year;
 import java.util.Scanner;
 
 public class Retirement {
@@ -20,11 +21,9 @@ public class Retirement {
         int yearsLeft = retire - ageNow;
         System.out.print("You have "+ yearsLeft + " years left until you retire \n");
 
-        System.out.print("What year is it?");
-        String currentYear = input.next();
-        int year = Integer.parseInt(currentYear);
+        //line to get the year from the java time
+        int year = Year.now().getValue();
         int retirementYear = year + yearsLeft;
-        System.out.print("It's "+currentYear+" so you can retire in "+ retirementYear);
-
+        System.out.print("It's "+year+" so you can retire in "+ retirementYear);
     }
 }
